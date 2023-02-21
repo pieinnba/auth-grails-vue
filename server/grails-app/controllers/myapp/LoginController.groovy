@@ -16,6 +16,9 @@ class LoginController {
      }
 
     def auth() {
+
+        println request.JSON
+
         for( item in Login.list()) {
             if(request.JSON.username.equals(item.username)) {
                 if(request.JSON.password.equals(item.password)) {
